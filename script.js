@@ -130,3 +130,25 @@ console.log(korok);
 var felnottKorJapanban = tombMuvelet(korok, felnott.bind(this, 20));
 
 console.log(felnottKorJapanban);
+
+//////////////////////////
+// String-ek ES6-ban
+
+const vezeteknev = 'Teszt';
+let keresztnev = 'Elek';
+const szuletesiEv = 1973;
+
+function korSzamitas(ev) {
+    return new Date().getFullYear() - ev;
+}
+
+// ES6
+console.log(`${vezeteknev} ${keresztnev}, született ${szuletesiEv} évben. Most ${korSzamitas(szuletesiEv)} éves.`);
+
+const nev = `${vezeteknev} ${keresztnev}`;
+
+console.log(nev.startsWith('t'));
+console.log(nev.endsWith('ek'));
+console.log(nev.includes('szt E'));
+console.log(vezeteknev.repeat(3));
+console.log(`${vezeteknev} `.repeat(3));
